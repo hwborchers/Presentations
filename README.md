@@ -117,8 +117,16 @@ English).
 
 ## In Preparation
 
+**JuliaCall: Calling Julia from R**  
+*Available in 2018*
+
+
+**CVXR: Disciplined Convex Programming in R**
+*Available in 2018*
+
+
 **Subgroup Discovery - a Data Mining Technique**
-*Available 2018*
+*Not yet available*
 
 Subgroup Discovery is a Data Mining algorithm that has high practical
 relevance in science and business applications. It identifies subsets of
@@ -128,6 +136,6 @@ insights into the data for you and/or your customers. Theory and two
 packages that implement this technique will be discussed.
 
 
-**Functional Data Analysis**\
+**Functional Data Analysis**  
 *Not yet available*
 
