@@ -7,12 +7,12 @@
 **Optimization With R — Tips and Tricks**  
 *Köln R User Group, September 2017*
 
-There are almost 100 packages listed on the CRAN optimization task view.
-We will discuss some of the more important packages in areas such as
-nonlinear optimization with and w/o constraints, least-squares problems,
-non-smooth and global optimization, and mixed integer programming. Tips
-and tricks will be provided for high precision or high-dimensional
-problems, for equality constraints, for minimax problems, etc.
+> There are almost 100 packages listed on the CRAN optimization task view.
+> We will discuss some of the more important packages in areas such as
+> nonlinear optimization with and w/o constraints, least-squares problems,
+> non-smooth and global optimization, and mixed integer programming. Tips
+> and tricks will be provided for high precision or high-dimensional
+> problems, for equality constraints, for minimax problems, etc.
 
 [Slides of the talk](Presents/ROptimSlides4.pdf)
 
