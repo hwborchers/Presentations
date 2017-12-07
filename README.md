@@ -56,14 +56,13 @@
 > be formulated in the AMPL modeling language and be sent to NEOS solvers
 > of the COIN-OR project.
 
-Jupyter notebook [An Example in Constraint
-Optimization](http://nbviewer.jupyter.org/url/hwborchers.lima-city.de/Presents/masop.ipynb)
+Jupyter notebook [An Example in Constraint Optimization](Presents/masop.ipynb)
 
 
 **Numerik mit MATLAB**  
 *DHBW Kurs, 20 Stunden, Mannheim, Herbst 2015*
 
-Skript [Numerik (mit MATLAB)]()
+Skript [Numerik (mit MATLAB)](Presents/NumerikSkript.pdf)
 
 
 **Introduction to Julia for R Users**  
@@ -77,9 +76,8 @@ Skript [Numerik (mit MATLAB)]()
 > available for time series, statistics and machine learning, or
 > operations research.
 
-[Notes from the Meetup in
-Cologne](http://www.meetup.com/KoelnRUG/events/207011512/) | [Handout of
-the Talk](./JuliaMeetup/K/talk/julia-handout4.pdf) (4 slides per page)
+[Notes from the Meetup in Cologne](http://www.meetup.com/KoelnRUG/events/207011512/)  
+[Handout of the Talk](./JuliaMeetup/K/talk/julia-handout.pdf)
 
 
 **An introduction to the Julia language for scientific computing and its
@@ -93,8 +91,7 @@ connection to Python with IJulia**
 > graphical notebook interface to Julia and enables easy use of Python
 > within Julia.
 
-Presentation: [Julia for Scientific
-Programming](./JuliaMeetup/HD/start_talk.html)
+Presentation: [Julia for Scientific Programming](Presents/juliatalk/start_talk.html)
 
 
 **Die Statistik-Umgebung R: Einführung, Übersicht, Anwendungen**  
@@ -109,8 +106,7 @@ Programming](./JuliaMeetup/HD/start_talk.html)
 > Fähigkeiten einer Open Source Software (OSS) in diesem Bereich
 > informieren möchten.
 
-Folien: [Statistics Environment R](./Presents/RinKassel2.pdf) (in
-English).
+Folien: [Statistics Environment R](./Presents/RinKassel2.pdf) (in English).
 
 
 ## In Preparation
