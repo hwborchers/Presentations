@@ -29,7 +29,7 @@
 > or mxnet are useful new contributions. Links to Microsoft Channel 9 are
 > included.
 
-[Short slide show](Presents/user2016pack.Rmd)
+[Short slide show (.Rmd)](Presents/user2016pack.Rmd)
 
 
 **Package V8: Computing With JavaScript in R**  
@@ -40,7 +40,7 @@
 > high-performance computing. We will present some examples of how to
 > utilize JavaScript for quite efficient numerical computations in R.
 
-[Short slide show](Presents/V8talk.html)
+[Short slide show (.PDF)](Presents/V8talk.pdf)
 
 
 **R Training - Basic Introduction**  
