@@ -81,7 +81,7 @@ Siehe Unterlagen [MatlabKurs](https://github.com/hwborchers/MatlabKurs/)
 > available for time series, statistics and machine learning, or
 > operations research.
 
-[Notes from the Meetup in Cologne](http://www.meetup.com/KoelnRUG/events/207011512/)  
+[Notes from the Meetup in Cologne](https://magesblog.com/post/2014-12-16-notes-from-kolner-r-meeting-12-december/)  
 [Handout of the Talk](Presents/julia-handout.pdf)
 
 
