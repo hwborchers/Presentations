@@ -1,5 +1,5 @@
 ![](Figures/hwpuppe2.png) ![](Figures/Rsquares2.png) ![](Figures/GaussTasse2.png)
-![](Figures/ericson2.png) ![](Figures/geier2.png)
+![](Figures/ericson2.png) ![](Figures/Geier2.png)
 <hr>
 
 
@@ -29,7 +29,7 @@
 > or mxnet are useful new contributions. Links to Microsoft Channel 9 are
 > included.
 
-[Short slide show](Presents/user2016pack.html)
+[Short slide show](Presents/user2016pack.Rmd)
 
 
 **Package V8: Computing With JavaScript in R**  
