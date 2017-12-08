@@ -81,7 +81,7 @@ Skript [Numerik (mit MATLAB)](Presents/NumerikSkript.pdf)
 
 
 **An introduction to the Julia language for scientific computing and its
-connection to Python with IJulia**
+connection to Python with IJulia**  
 *Heidelberg Python Meetup Group, September 2014*
 
 > Julia is a high-level, high-performance dynamic programming language for
