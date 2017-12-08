@@ -1,0 +1,272 @@
+---
+title: "Package Presentations<br />at UseR! 2016"
+author: "Hans W Borchers, DHBW Mannheim"
+date: "Wiesbaden R User Group, August 2016"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Overview Talks
+
+  * Rick Becker: "Forty Years of S"
+
+  * Don Knuth: "Literate Programming"
+
+  * Hadley Wickham: "Towards a grammar of interactive graphics"
+
+Videos of these and many other talks from the UseR! 2016 Conference,
+June 28-30 at Stanford University, are hosted at Microsoft's Channel 9:
+
+https://channel9.msdn.com/events/useR-international-R-User-conference/useR2016
+
+## R Markdown Notebooks
+
+"An R Notebook is an R Markdown document with chunks that can be executed independently and interactively, with output visible immediately beneath the input."
+
+"R Notebooks are new feature of RStudio, and are currently available only in the RStudio Preview Release. If you want to try out the features described below please install the preview release."
+(>= v0.99.1266 Preview)
+
+https://www.rstudio.com/products/rstudio/download/preview/
+
+    ---
+    title: "Penalty Shooting"
+    output: html_notebook
+    ---
+
+Notebooks can be converted to HTML pages or PDF documents.
+
+## bookdown
+
+"R package to facilitate writing books and long-form articles/reports with R Markdown.
+Integrated with the RStudio IDE. One-click publishing to https://bookdown.org."
+
+Examples:  
+*Bookdown: Authoring Books with R Markdown* by Yihui Xie  
+*Efficient R programming* by C. Gillespie and R. Lovelace
+
+"Multiple output formats: HTML, PDF, and ePub.  
+Makes it easy to produce books that look visually pleasant.  
+Styles include Gitbook (https://www.gitbook.com), Tufte CSS (http://rstudio.github.io/tufte/), and Tufte-LaTeX.  
+Extended Markdown syntax to support numbering figures/tables, and cross-references.  
+Renders interactive HTML widgets and Shiny apps in books.
+
+## profvis
+
+profvis -- interactive visualizations for profiling R code
+
+R has an integrated profiler *Rprof* that can be called quite easily:
+
+```r
+Rprof(); ... some code ...; Rprof(NULL)
+```
+
+*profvis* provides a beautiful, **interactive**, and very detailed
+interface to the output of *Rprof*.
+
+```r
+profvis({ ... some code ... })
+```
+
+*profvis* can be called directly from the RStudio interface  
+through the 'Profile' menu item.  
+`Profile -> Start Profiling`
+
+## covr
+
+covr -- test coverage for R packages
+
+"Tracks and reports code coverage for your package and (optionally) uploads the results to a coverage service."
+
+It tests R, C, C++, and Fortran code.  
+For testing it uses tests, examples, and vignettes.  
+There is continuous integration with Travis.
+
+```r
+library(covr)
+package_coverage(path="path_to_pracma", type = "tests")
+## pracma Coverage: 20.63% ...
+
+package_coverage(path="path_to_pracma", quiet = FALSE,
+                 type = c("tests", "vignettes", "examples")
+## pracma Coverage: 83.77% ...
+```
+
+## broom
+
+"The broom package takes the messy output of built-in functions in R, such as `lm`, `nls`, or `t.test`, and turns them into tidy data frames."
+
+```r
+    #library(broom)
+    myfit <- lm(mpg ~ wt, mtcars)
+    # summary(lmfit)
+    broom::tidy(myfit)  # see also: augment, glance
+```
+
+          term  estimate std.error statistic      p.value
+    1 (Intercept) 37.285126  1.877627 19.857575 8.241799e-19
+    2          wt -5.344472  0.559101 -9.559044 1.293959e-10
+
+Available S3 methods for the following functions and packages:
+
+lm, glm, htest, anova, nls, kmeans, manova, TukeyHSD, arima  
+lme4, glmnet, boot, gam, survival, lfe, zoo, multcomp, sp, maps
+
+## feather
+
+"Feather is a fast, lightweight, and easy-to-use binary file format for storing data frames. It has a few specific design goals:"  
+
+  * lightweight, minimal API
+  * language agnostic: R, Python, Julia [, Scala]
+  * high read/write performance on disc
+
+```
+# R                             # Python
+library(feather)                import feather
+path <- "my_data.feather"       path = 'my_data.feather'
+write_feather(df, path)         feather.write_dataframe(df, path)
+df <- read_feather(path)        df = feather.read_dataframe(path)
+```
+
+Mini-Benchmark: Python 1.25 s, R 1.05 s for reading 800 MB
+
+`https://blog.rstudio.org/2016/03/29/feather/`
+`devtools::install_github("wesm/feather/R")`
+
+## cvxr
+
+CVXR -- an R modeling language for convex optimization
+
+Connects to conic optimization solvers ECOS, SCS [, CVXOPT]
+
+Example: **Ordinary Least Squares Problem**
+
+```r
+library(cvxr)
+x <- Variable(n)
+obj <- SumSquares(b - A %*% x)
+constr <- list(x >= 0, SumEntries(x) == 1)
+prob <- Problem(Minimize(obj), constr)
+solution <- Solve(prob)
+solution$opt_val; solution$x
+```
+
+`devtools::install_github("anqif/cvxr")`  
+[not yet finished or usable]
+
+## PythonInR
+
+*PythonInR* (by Florian Schwendinger) --<br/>
+"... makes accessing Python from within R as easy as pie."
+
+[PythinInR homepage](https://bitbucket.org/Floooo/pythoninr/) with cheat sheet and usage examples
+
+NOTES:
+
+John Chambers, in his new book "Extending R" end of 2015, has written two packages, *XRPython* and *XRJulia*, providing interfaces to the Python and Julia programming languages.
+
+In February 2016 RStudio has published the *reticulate* package that "provides an R interface to Python modules, classes, and functions."
+
+[Introduction to reticulate](https://cran.rstudio.com/web/packages/reticulate/vignettes/introduction.html)
+
+## future
+
+future -- a Future for R
+
+"The purpose of the *future* package is to provide a very simple and uniform way of evaluating R expressions asynchronously using various resources available to the user."
+
+```r
+> library(future)
+> plan(multiprocess)  # multisession, multicore, cluster, remote
+> v %<-% { expr }     # creates a future and a promise to its value
+> v
+```
+
+"With asynchronous futures, the current/main R process does not block, which means it is available for further processing while the futures are being resolved in separates processes running in the background. In other words, futures provide a simple but yet powerful construct for parallel and / or distributed processing in R."
+
+## xgboost
+
+xgboost -- Extreme Gradient Boosting
+
+**XGBoost** (see https://xgboost.readthedocs.io/) is a program for 'scalable and flexible gradient boosting' [J. H. Friedmann, 1999], and supports languages like Python, R, Julia, or Scala.
+
+"*Wins many data science and machine learning challenges*.  
+*Used in production by multiple companies*."
+
+*xgboost* is an R interface to XGBoost.
+
+```r
+bst <- xgboost(data = train.data, label = train.label,
+               max.depth = 2, eta = 1, nthread = 2, nround = 2, 
+               objective = "binary:logistic")
+pred <- predict(bst, test.data)
+```
+
+`github.com/dmlc/xgboost/blob/master/doc/parameter.md`
+
+## ranger
+
+ranger -- a fast implementation of random forest
+
+"A fast implementation of Random Forests, particularly suited for high dimensional data. Ensembles of classification, regression, survival and probability prediction trees are supported."
+
+```r
+rf <- ranger(Species ~ ., data = iris.train)
+##Ranger result
+##  Number of trees:                  500
+##  Sample size:                      150
+##  ...
+##  OOB prediction error:               4.00 %
+```
+
+```r
+pred <- predict(rf, data = iris.test)
+```
+
+## mxnet
+
+mxnet -- deep learning for R with MXNet
+
+"MXNet is a deep learning framework designed for both efficiency and flexibility. ... The library is portable and lightweight, and it scales to multiple GPUs and multiple machines.
+
+"Embedded in the host language, it blends declarative symbolic expression with imperative tensor computation. It offers auto differentiation to derive gradients."
+
+Provides wrappers for Python, R, Scala, and Julia.
+
+`devtools::install_github("dmlc/mxnet")`  
+http://mxnet.readthedocs.io/en/latest/
+
+## MonetDBLite
+
+MonetDBLite -- efficient tabular data ingestion and manipulation
+
+"MonetDB is an open-source column-oriented DBMSystem designed for high performance on complex queries against large databases."
+
+MonetDBLite includes a version of MonetDB that fully runs within the R process, no installation or setup required. The package can be thought of as a replacement for *RSQLite*.
+
+Alternatives:
+
+  - noSQL databases:   *mongolite* (MongoDB),  *couchDB*
+  - graph databases:   *?* (GraphDB)
+  - times series data: *rredis*
+
+## Rho
+
+* **Rho** <https://github.com/rho-devel/rho> (formerly CXXR)  
+  Refactoring the R interpreter into C++
+
+* **FastR** <https://github.com/allr/fastr/>, Purdue University  
+  Implementation of the R language in Java (+ Truffle, Graal)
+
+* pqR <http://www.pqr-project.org/>, Redford Neal  
+  Pretty quick version of the R interpreter
+
+* **Renjin** <http://www.renjin.org/>, bedatadriven, NL  
+  R interpreter for the JVM
+
+* Riposte <https://github.com/jtalbot/riposte/>  
+
+* RLLVM <http://www.omegahat.org/>  
+  Package to interface R to the LLVM library

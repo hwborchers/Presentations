@@ -1,3 +1,8 @@
+![](Figures/hwpuppe2.png) ![](Figures/Rsquares2.png) ![](Figures/GaussTasse2.png)
+![](Figures/ericson2.png) ![](Figures/geier2.png)
+<hr>
+
+
 # Presentations
  
 ## Talks 2014 - 2017
@@ -77,7 +82,7 @@ Skript [Numerik (mit MATLAB)](Presents/NumerikSkript.pdf)
 > operations research.
 
 [Notes from the Meetup in Cologne](http://www.meetup.com/KoelnRUG/events/207011512/)  
-[Handout of the Talk](./JuliaMeetup/K/talk/julia-handout.pdf)
+[Handout of the Talk](Presents/julia-handout.pdf)
 
 
 **An introduction to the Julia language for scientific computing and its
