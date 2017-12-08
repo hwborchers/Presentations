@@ -17,7 +17,7 @@
 > and tricks will be provided for high precision or high-dimensional
 > problems, for equality constraints, for minimax problems, etc.
 
-[Slides of the talk](Presents/ROptimSlides4.pdf)
+[Slides of the talk](Presents/ROptimSlides.pdf)
 
 
 **Infos on new packages presented at UseR 2016**  
@@ -67,11 +67,11 @@ Jupyter notebook [An Example in Constraint Optimization](Presents/masop.ipynb)
 **Numerik mit MATLAB**  
 *DHBW Kurs, 20 Stunden, Mannheim, Herbst 2015*
 
-Skript [Numerik (mit MATLAB)](Presents/NumerikSkript.pdf)
+Siehe Unterlagen [MatlabKurs](https://github.com/hwborchers/MatlabKurs/)
 
 
 **Introduction to Julia for R Users**  
-*CKöln R User Group, December 2014*
+*Köln R User Group, December 2014*
 
 > Julia is a high-performance dynamic programming language for scientific
 > computing, with a syntax that is familiar to users of other technical
