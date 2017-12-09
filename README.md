@@ -96,7 +96,7 @@ connection to Python with IJulia**
 > graphical notebook interface to Julia and enables easy use of Python
 > within Julia.
 
-Presentation: [Julia for Scientific Programming](Presents/juliatalk/start_talk.html)
+Presentation: [Julia for Python Users](https://cdn.rawgit.com/hwborchers/Presentations/ab7a91f8/Presents/juliatalk/start_talk.html)
 
 
 **Die Statistik-Umgebung R: Einführung, Übersicht, Anwendungen**  
