@@ -21,7 +21,7 @@
 
 [Slides of the talk](Presents/ROptimSlides.pdf)
 
-**Can R Be Used for Numerical Mathematics?**
+**Can R Be Used for Numerical Mathematics?**  
 *Private Communication*
 
 > R is a "software environment for statistical computing and graphics."
@@ -31,7 +31,7 @@
 > algebra, and ways to integrate with other scientific environments such as
 > Python, Julia, MATLAB/Octave, or even Mathematica.
 
-**Symbolic and Numeric Differentiation With R**
+**Symbolic and Numeric Differentiation With R**  
 *Private Communication*
 
 > Function differentiation is an important technique for optimization
@@ -141,14 +141,11 @@ Folien: [Statistics Environment R](./Presents/RinKassel2.pdf) (in English).
 
 ## In Preparation
 
-
 **JuliaCall: Calling Julia from R**  
 *Available in 2018*
 
-
 **CVXR: Disciplined Convex Programming in R**  
 *Available in 2018*
-
 
 **Subgroup Discovery - a Data Mining Technique**  
 *Not yet available*
@@ -159,7 +156,6 @@ Folien: [Statistics Environment R](./Presents/RinKassel2.pdf) (in English).
 > useful in the explanatory data analysis phase and can provide surprising
 > insights into the data for you and/or your customers. Theory and two
 > packages that implement this technique will be discussed.
-
 
 **Functional Data Analysis**  
 *Not yet available*
