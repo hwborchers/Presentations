@@ -5,7 +5,9 @@
 
 # Presentations
  
-## Talks 2014 - 2017
+## Talks 2014 - 2018
+
+### 2017
 
 **Optimization With R — Tips and Tricks**  
 *Köln R User Group, September 2017*
@@ -19,9 +21,30 @@
 
 [Slides of the talk](Presents/ROptimSlides.pdf)
 
+**Can R Be Used for Numerical Mathematics?**
+*Private Communication*
+
+> R is a "software environment for statistical computing and graphics."
+> But can R be used in courses on Numerical Mathematics, and is it possible
+> to apply R to real-world numerical problems? Many R packages will be
+> discussed that provide functionality in numerical analysis and linear
+> algebra, and ways to integrate with other scientific environments such as
+> Python, Julia, MATLAB/Octave, or even Mathematica.
+
+**Symbolic and Numeric Differentiation With R**
+*Private Communication*
+
+> Function differentiation is an important technique for optimization
+> problems and differential equations applications, in engineering and many
+> other areas. The talk will discuss packages for symbolic differentiation,
+> automatic forward differentiation (implemented as S4 class), the complex
+> step approach, central difference formulas, Richardson extrapolation for 
+> computing numerical Hessians, and higher order derivatives.
+
+### 2016
 
 **Infos on new packages presented at UseR 2016**  
-*Private Communication, August 2016*
+*Meetup Session, August 2016*
 
 > Some interesting packages presented at the UseR! 2016 at Stanford
 > University will be described in one slide each, including profvis, covr,
@@ -33,7 +56,7 @@
 
 
 **Package V8: Computing With JavaScript in R**  
-*Private Communication, April 2016*
+*Meetup Session, April 2016*
 
 > Package V8 provides an interface to Google's open source JavaScript
 > engine and thus implements ECMAScript with compiled libraries for
@@ -50,6 +73,7 @@
 > statistische Graphen, Programmierung mit R, Beispiele der Regression,
 > etc.
 
+### 2015
 
 **Nonlinear Optimization with R - An engineering example**  
 *Wiesbaden R Users Group, October 2015*
@@ -69,6 +93,7 @@ Jupyter notebook [An Example in Constraint Optimization](Presents/masop.ipynb)
 
 Siehe Unterlagen [MatlabKurs](https://github.com/hwborchers/MatlabKurs/)
 
+### 2014
 
 **Introduction to Julia for R Users**  
 *Köln R User Group, December 2014*
