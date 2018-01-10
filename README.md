@@ -159,3 +159,8 @@ Folien: [Statistics Environment R](./Presents/RinKassel2.pdf) (in English).
 
 **Functional Data Analysis**  
 *Not yet available*
+
+**Irrfahrten und ihre Folgen**  
+*Available in 2018*
+
+[In German]
