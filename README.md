@@ -161,6 +161,5 @@ Folien: [Statistics Environment R](./Presents/RinKassel2.pdf) (in English).
 *Not yet available*
 
 **Irrfahrten und ihre Folgen**  
-*Available in 2018*
-
-[In German]
+*Available in 2018*  
+[English: Random Walks and their Consequences]
