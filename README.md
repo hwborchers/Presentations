@@ -20,7 +20,7 @@
 > constraints and quadratic optimization, for instance the "smallest 
 > enclosing ball" problem.
 
-[Slides of the Talk](Presents/CVXRtalk4.pdf)
+[Slides of the Talk](Presents/CVXRtalk2.pdf)
 
 ### 2017
 
