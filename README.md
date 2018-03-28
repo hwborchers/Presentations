@@ -20,7 +20,7 @@
 > constraints and quadratic optimization, for instance the "smallest 
 > enclosing ball" problem.
 
-[Slides of the Talk](Presents/CVXRtalk2.pdf)
+[Slides of the Talk](Presents/CVXRtalk4.pdf)
 
 ### 2017
 
@@ -34,7 +34,7 @@
 > and tricks will be provided for high precision or high-dimensional
 > problems, for equality constraints, for minimax problems, etc.
 
-[Slides of the talk](Presents/ROptimSlides.pdf)
+[Slides of the talk](Presents/ROptimSlides2.pdf)
 
 **Can R Be Used for Numerical Mathematics?**  
 *Private Communication*
