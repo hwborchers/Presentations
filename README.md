@@ -159,9 +159,6 @@ Folien: [Statistics Environment R](./Presents/RinKassel2.pdf) (in English).
 **JuliaCall: Calling Julia from R**  
 *Available in 2018*
 
-**CVXR: Disciplined Convex Programming in R**  
-*Available in 2018*
-
 **Subgroup Discovery - a Data Mining Technique**  
 *Not yet available*
 
