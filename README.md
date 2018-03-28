@@ -7,6 +7,21 @@
  
 ## Talks 2014 - 2018
 
+### 2018
+
+**Disciplined Convex Programming with CVXR**  
+*R User Group, Heidelberg, April 2018*
+
+> CVXR is a new R package that provides a modeling language for 
+> Convex Programming, similar to CVX for MATLAB or CVXPY for Python. The 
+> user can formulate optimization problems following the mathematical 
+> equations describing it. The talk will give a short introduction to 
+> convex optimization, followed by several examples in regression with 
+> constraints and quadratic optimization, for instance the "smallest 
+> enclosing ball" problem.
+
+[Slides of the Talk](Presents/CVXRtalk.html)
+
 ### 2017
 
 **Optimization With R — Tips and Tricks**  
