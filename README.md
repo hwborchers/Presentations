@@ -5,7 +5,29 @@
 
 # Presentations
  
-## Talks 2014 - 2018
+## Talks 2014 - 2019
+
+### 2019
+
+**JuliaCall: Calling Julia from R**  
+*Github Page, 2017, Updated to Julia 1.0 in 2019*
+
+> A short description of how to install JuliaCall and make use of Julia 
+> functions from R. Includes examples on plotting, for Optimization and 
+> Automatic Differentiation (AD), or calculating special functions not 
+> available in R.
+
+[Notes on JuliaCall](https://hwborchers.github.io/)
+
+**Random Numbers and Walks**  
+*R User Groups, February 2019*
+
+> Presents and discusses several CRAN packages dealing with Random Number 
+> Generators (RNGs). Applies random numbers to the simulation of Random 
+> Walks and for calculating some of their properties. Use of JavaScript 
+> and/or Julia in simulation studies for faster run-times is demonstrated.
+
+[Slides of the Talk](http://rpubs.com/hwborchers/468010)
 
 ### 2018
 
@@ -156,9 +178,6 @@ Folien: [Statistics Environment R](./Presents/RinKassel2.pdf) (in English).
 
 ## In Preparation
 
-**JuliaCall: Calling Julia from R**  
-*Available in 2018*
-
 **Subgroup Discovery - a Data Mining Technique**  
 *Not yet available*
 
@@ -171,7 +190,3 @@ Folien: [Statistics Environment R](./Presents/RinKassel2.pdf) (in English).
 
 **Functional Data Analysis**  
 *Not yet available*
-
-**Irrfahrten und ihre Folgen**  
-*Available in 2018*  
-[English: Random Walks and their Consequences]
