@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Numbers in R</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="generator" content="pandoc" />
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <base target="_blank">
+
+  <script type="text/javascript">
+    var SLIDE_CONFIG = {
+      // Slide settings
+      settings: {
+                title: 'Random Numbers in R',
+                        useBuilds: true,
+        usePrettify: true,
+        enableSlideAreas: true,
+        enableTouch: true,
+                      },
+
+      // Author information
+      presenters: [
+            {
+        name:  '<strong>Hans W Borchers</strong>' ,
+        company: '',
+        gplus: '',
+        twitter: '',
+        www: '',
+        github: ''
+      },
+            ]
+    };
+  </script>
+
+  <link href="RandomNumbers_files/ioslides-13.5.1/fonts/fonts.css" rel="stylesheet" />
+  <link href="RandomNumbers_files/ioslides-13.5.1/theme/css/default.css" rel="stylesheet" />
+  <link href="RandomNumbers_files/ioslides-13.5.1/theme/css/phone.css" rel="stylesheet" />
+  <script src="RandomNumbers_files/ioslides-13.5.1/js/modernizr.custom.45394.js"></script>
+  <script src="RandomNumbers_files/ioslides-13.5.1/js/prettify/prettify.js"></script>
+  <script src="RandomNumbers_files/ioslides-13.5.1/js/prettify/lang-r.js"></script>
+  <script src="RandomNumbers_files/ioslides-13.5.1/js/prettify/lang-yaml.js"></script>
+  <script src="RandomNumbers_files/ioslides-13.5.1/js/hammer.js"></script>
+  <script src="RandomNumbers_files/ioslides-13.5.1/js/slide-controller.js"></script>
+  <script src="RandomNumbers_files/ioslides-13.5.1/js/slide-deck.js"></script>
+
+  <style type="text/css">
+
+    b, strong {
+      font-weight: bold;
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    summary {
+      display: list-item;
+    }
+
+    slides > slide {
+      -webkit-transition: all 0.4s ease-in-out;
+      -moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .auto-fadein {
+      -webkit-transition: opacity 0.6s ease-in;
+      -webkit-transition-delay: 0.4s;
+      -moz-transition: opacity 0.6s ease-in 0.4s;
+      -o-transition: opacity 0.6s ease-in 0.4s;
+      transition: opacity 0.6s ease-in 0.4s;
+      opacity: 0;
+    }
+
+  </style>
+
+
+</head>
+
+<body style="opacity: 0">
+
+<slides>
+
+  <slide class="title-slide segue nobackground">
+        <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+            <p style="margin-top: 6px; margin-left: -2px;"><em>Heidelberg, February 2019</em></p>
+          </hgroup>
+  </slide>
+
+<slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Random Numbers</h2></hgroup><article  id="random-numbers">
+
+</article></slide><slide class=""><hgroup><h2>Random Number Generators (RNGs)</h2></hgroup><article  id="random-number-generators-rngs">
+
+<ul>
+<li><p>(<em>Pseudo</em>-)Random number generators in Base R</p>
+
+<pre >RNGkind(kind = &quot;default&quot;, normal.kind = NULL)
+set.seed(seed)  # i.e., seed &lt;- .Random.seed 
+
+runif(n)        # or: rnorm(n); rexp(n)
+sample(x, size, replace = FALSE, prob = NULL)</pre>
+
+<p>Wichmann-Hill: \(6.9\cdot10^{12}\); Marsaglia-Multicarry: \(1.1\cdot10^{18}\)<br/>Super-Duper: \(4.6\cdot 10^{18}\); <strong>Mersenne-Twister</strong>: \(\approx 10^{6000}\)<br/>Knuth-TAOCP-2002: \(6.8 \cdot 10^{38}\); L’Ecuyer-CMRG: \(3.1\cdot 10^{57}\)</p></li>
+<li><p>Recommended &lsquo;help&rsquo; pages:</p>
+
+<pre >?Random       # details on RNG in R, &#39;kinds&#39;, &#39;seeds&#39;, etc.
+?Random.user  # user-supplied random number generation</pre></li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>dqrng and qrng Packages</h2></hgroup><article  id="dqrng-and-qrng-packages">
+
+<ul>
+<li><p><strong>dqrng</strong>: Fast pseudo-random number generator</p>
+
+<pre >dqrunif()`, `dqrnorm()`, `dqrexp()
+dqset.seed()`, `dqRNGkind(kind = &quot;Mersenne-Twister&quot;)</pre>
+
+<p>64-bit Mersenne-Twister, pcg64,<br/>Xoroshiro128+, Xoshiro256+ (defaults in Erlang and Lua),<br/>Threefry (64 bit engine provided by <strong>sitmo</strong>)</p></li>
+<li><p><strong>qrng</strong>: <em>Quasi</em>-random numbers in high dimensions</p>
+
+<pre >korobov(n, d = 1, generator, randomize = FALSE)
+ghalton(n, d = 1, method = c(&quot;generalized&quot;, &quot;halton&quot;))
+sobol  (n, d = 1, randomize = FALSE, skip = 0)</pre>
+
+<p>Developed specifically for Monte-Carlo applications</p></li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>Pseudo, quasi, and true RNGs</h2></hgroup><article  id="pseudo-quasi-and-true-rngs">
+
+<ul>
+<li><p><em>Pseudo-random numbers</em><br/>are sequences of numbers whose statistical properties approximate the properties of theoretical random number sequences.</p></li>
+<li><p><em>Quasi-random numbers</em><br/>are &lsquo;low-discrepancy sequences&rsquo;, that is the proportion of numbers falling into an arbitrary subset is close to the measure of that subset.</p></li>
+<li><p><em>True random numbers</em><br/>are generated from physical processes that are known to behave like statistically random &lsquo;noise&rsquo; signals.</p></li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2><em>True</em> Random Number Generators</h2></hgroup><article  id="true-random-number-generators">
+
+<ul>
+<li><p><strong>random</strong><br/>RANDOM.ORG &ldquo;samples atmospheric noise via radio tuned to an unused broadcasting frequency together with a skew correction algorithm by John von Neumann.&rdquo;</p>
+
+<pre >library(random); N = 10000  # maximum request
+rn &lt;- randomNumbers(n = N, min = 0, max = N, col = 2)/N</pre></li>
+<li><p><strong>qrandom</strong><br/>ANU Quantum Random Number Generator &ldquo;generates true random numbers in real-time by measuring the quantum fluctuations of the vacuum.&rdquo;</p>
+
+<pre >library(qrandom); N = 10000  # maximum request: 10^5 [1024]
+rn &lt;- qrandomunif(n = N, a = 0, b = 1)</pre></li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>Generate Random Distributions</h2></hgroup><article  id="generate-random-distributions">
+
+<p>If \(u\) are uniformly distributed random numbers (in \([0, 1]\))<br/>and \(F\) is a <em>cumulative distribution function</em>, then the numbers<br/>\(F^{-1}(u)\) are random numbers in this statistical distribution.</p>
+
+<p>Example: Normal (Gaussian) distribution<br/>( with mean = 0.0 and sd = 1.0)</p>
+
+<pre class = 'prettyprint lang-r'>    x  &lt;- runif(1000)
+    xn &lt;- qnorm(x)      # qnorm() is the inverse of pnorm()
+    summary(xn)</pre>
+
+<pre >##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+## -3.06333 -0.67881 -0.03556 -0.01626  0.65103  2.91529</pre>
+
+<p>Alternative: Ziggurat algorithm</p>
+
+</article></slide><slide class=""><hgroup><h2>More RNGs in Packages</h2></hgroup><article  id="more-rngs-in-packages">
+
+<ul>
+<li><p><strong>randaes</strong> (2012)<br/>cryptographic random number generator, based on AES</p></li>
+<li><p><strong>rngwell19937</strong> (2014)<br/>long period linear random number generator WELL19937a</p></li>
+<li><p><strong>rstream</strong> (2017)<br/>streams of random numbers from different sources</p></li>
+<li><p><strong>Tinflex</strong> (2017)<br/>generator for arbitrary distributions with piecewise<br/>twice differentiable densities</p></li>
+<li><p><strong>UnivRNG</strong> and <strong>MultiRNG</strong> (2018)<br/>uni-/multivariate random number generation for quite<br/>a number of different distributions</p></li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>User-defined RNGs and Tools</h2></hgroup><article  id="user-defined-rngs-and-tools">
+
+<ul>
+<li><p><em>?Random.user</em><br/>&ldquo;Function <code>RNGkind()</code> allows user-coded uniform and normal random number generators to be supplied.&rdquo;</p>
+
+<pre >dyn.load(&quot;&lt;user.lib&gt;&quot;)
+RNGkind(kind = &quot;user-supplied&quot;)</pre></li>
+<li><p><strong>randtoolbox</strong><br/>Toolbox for pseudo and quasi random number generation</p></li>
+<li><p><strong>rngtools</strong><br/>Utility functions for working with RNGs</p></li>
+<li><p><strong>setRNG</strong><br/>for compatibility with former S versions</p></li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>How to Write your own RNG in R?</h2></hgroup><article  id="how-to-write-your-own-rng-in-r">
+
+<ul>
+<li><p>Congruential random number generation</p>
+
+<p>\[x_{i+1} = (a x_i + c)\,\mathrm{mod}\,m\]</p>
+
+<pre >e.g., m = 2^32,     a = 1103515245, c = 12345
+or    m = 2^31 - 1, a = 48271,      c = 0     (Lehmer RNGs)</pre></li>
+<li><p>Knuth-TAOCP-2002</p>
+
+<p>\[x_i = (x_{i-37} + x_{i-100})\,\mathrm{mod}\,2^{30}\] (and discard the first 2000 numbers)</p></li>
+</ul>
+
+<p>See also the <strong>randtoolbox</strong> vignette, Dutang and Würtz (2009)<br/><em>A note on random number generation</em></p>
+
+</article></slide><slide class=""><hgroup><h2></h2></hgroup><article >
+
+<p><strong>Knuth-TAOCP-2002</strong> – an R Implementation</p>
+
+<pre >randTAOCP &lt;- function(seed = NULL) {
+    local({
+        R &lt;- vector(mode = &quot;numeric&quot;, length = 2000)
+        R[1:100] &lt;- qrandom::qrandomunif(n = 100, a = 0, b = 1)
+        for (k in 101:2000)
+            R[k] &lt;- (R[k-37] + R[k-100]) %% 1
+        k &lt;- 2000; i &lt;- 2000 - 37; j &lt;- 2000 - 100
+        frand &lt;- function() {
+            k &lt;&lt;- (k %% 2000) + 1
+            i &lt;&lt;- (i %% 2000) + 1
+            j &lt;&lt;- (j %% 2000) + 1
+            z &lt;- (R[i] + R[j]) %% 1
+            R[k] &lt;&lt;- z
+            return(z)
+        }
+        return(frand)
+    })
+}</pre>
+
+</article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Tests for RNGs</h2></hgroup><article  id="tests-for-rngs">
+
+</article></slide><slide class=""><hgroup><h2>Testing Random Number Generators</h2></hgroup><article  id="testing-random-number-generators">
+
+<ul>
+<li><p><strong>RDieHarder</strong><br/>R Interface to the &lsquo;DieHarder&rsquo; RNG Test Suite</p>
+
+<p>Not even &lsquo;Mersenne Twister&rsquo; satisfies all these tests!</p></li>
+<li>Simple RNG tests, e.g.
+
+<ul>
+<li>Spectral test in d dimensions</li>
+<li>Permutation rank distribution</li>
+<li>Monte Carlo value for \(\pi\)</li>
+<li>&lsquo;Greatest Common Divisor&rsquo; test</li>
+<li><p>Birthday spacing test</p></li>
+<li><p><em>Random Walk</em> tests</p></li>
+</ul></li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>Example: 3D Spectral Test</h2></hgroup><article  id="example-3d-spectral-test">
+
+<p>Search for lattice structure (in all dimensions)</p>
+
+<img src='test.png' title=''/>
+
+</article></slide><slide class=""><hgroup><h2>Example: Image Sampling</h2></hgroup><article  id="example-image-sampling">
+
+<p>Mitchell’s best-candidate algorithm for Poisson disk distribution</p>
+
+<img src='quasirandom.png' title=''/>
+
+</article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Example: Random Walks</h2></hgroup><article  id="example-random-walks">
+
+</article></slide><slide class=""><hgroup><h2>&ldquo;Irrfahrten und ihre Folgen&rdquo;</h2></hgroup><article  id="irrfahrten-und-ihre-folgen">
+
+<p><strong>Definition</strong> (Pearson 1905)<br/>A <strong>random walk</strong> consists of a succession of random steps on some discrete grid. An elementary example is the <strong>symmetric</strong> random walk on the integers that starts at 0 and at each step moves +1 or −1 with equal probability.</p>
+
+<p><strong>Theorem</strong> (Polya 1921).<br/><em>A symmetric random walk in one or two dimensions will return<br/>to its starting point</em> almost certainly <em>(i.e., with probability 1)</em>.</p>
+
+<p>Applications in<br/>Queing models, Brownian motion, stock markets, animal behavior, risk analysis, diffusion processes, game theory, …</p>
+
+<p>Random walks are fundamental for Markov processes.</p>
+
+</article></slide><slide class=""><hgroup><h2>Visualization of Random Walks</h2></hgroup><article  id="visualization-of-random-walks">
+
+<img src='TypRandomWalks.png' title=''/>
+
+</article></slide><slide class=""><hgroup><h2>Original Project Idea</h2></hgroup><article  id="original-project-idea">
+
+<p><strong>Goal</strong></p>
+
+<ul>
+<li>Generate a million or so example curves, starting and ending<br/>in 0, by smoothing enough random walks (splines, etc.)</li>
+<li>Store these curves in appropriate databases</li>
+<li>Apply <strong>Functional Data Analysis</strong> (FDA) methods to classify, compare by similarity, and retrieve similar curves</li>
+</ul>
+
+<p><strong>Problem</strong></p>
+
+<ul>
+<li><p>Find enough nontrivial random walks returning to 0</p></li>
+<li><p><strong>Or</strong>: What is the probability that a random walk returns to 0 after at most <em>n</em> steps?</p></li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>Random Walks Step-by-Step</h2></hgroup><article  id="random-walks-step-by-step">
+
+<pre class = 'prettyprint lang-r'>rwalk &lt;- function(N, M) {
+    result &lt;- rep(0, N)
+    for (i in 1:N) {
+        steps &lt;- 2
+        a &lt;- if (dqrunif(1) &gt;= 0.5) 1 else -1
+        a &lt;- a + if (dqrunif(1) &gt;= 0.5) 1 else -1
+        while (a != 0) {
+            steps &lt;- steps + 2
+            a &lt;- a + if (dqrunif(1) &gt;= 0.5) 1 else -1
+            a &lt;- a + if (dqrunif(1) &gt;= 0.5) 1 else -1
+            if (steps &gt;= M) break
+        }
+        result[i] &lt;- steps
+    }
+    result
+}</pre>
+
+<p>Discussion on other, more compact approaches ?</p>
+
+</article></slide><slide class=""><hgroup><h2>Probability Distribution of RWs</h2></hgroup><article  id="probability-distribution-of-rws">
+
+<img src='cumprob.png' title=''/>
+
+</article></slide><slide class=""><hgroup><h2>Derive Minimum No. of Steps</h2></hgroup><article  id="derive-minimum-no.of-steps">
+
+<pre class = 'prettyprint lang-r'>N &lt;- 10000; M = 2048
+result &lt;- numeric(100)
+for (i in 1:100) {              # 100 simulation runs
+    no_steps &lt;- rwalk(N, M)     # vector of step lengths
+    r &lt;- rle(sort(no_steps))    # &#39;run length encoding&#39;
+    x &lt;- r$values               # steps
+    y &lt;- cumsum(r$lengths)/N    # probability
+    ind &lt;- which(y &gt; 0.975)[1]  # where is p &gt; 0.975
+    result[i] &lt;- x[ind]         # store no. of steps
+}
+
+summary(result)
+##  ...</pre>
+
+<p>Repeat this for different uniform RNGs in <code>rwalk()</code></p>
+
+</article></slide><slide class=""><hgroup><h2>Simulation Results</h2></hgroup><article  id="simulation-results">
+
+<p>Simulate 100 times and compute the 97.5% level:<br/>10000 random walks – stopping at length 2048</p>
+
+<pre ># with `runif()`
+&gt; summary(result)
+##  Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+##   684     959    1018    1038    1120    1476
+
+# with `dqrunif()`
+&gt; summary(result)
+##  Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+##   752     941    1013    1025    1108    1320
+
+# with `randTAoCP()`
+&gt; summary(result)
+##  Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   806     944    1003    1026    1098    1302 </pre>
+
+</article></slide><slide class=""><hgroup><h2>Theory of Random Walks</h2></hgroup><article  id="theory-of-random-walks">
+
+<p>The probability for returning to zero for the first time after exactly 2n steps is: \[P(W = 2n) = {2(n-1) \choose n-1} \frac{1}{2^{2(n-1)}} \frac{1}{2n}\]</p>
+
+<pre class = 'prettyprint lang-r'>n &lt;- 1:512
+a &lt;- choose(2*(n-1), n-1)/2^(2*(n-1))/(2*n)
+w &lt;- c(0, cumsum(a))
+cbind(2*c(510:512), w[510:512])</pre>
+
+<pre >##      [,1]      [,2]
+## [1,] 1020 0.9749989
+## [2,] 1022 0.9750234
+## [3,] 1024 0.9750478</pre>
+
+</article></slide><slide class=""><hgroup><h2>Remark about the \(P = 0.99\) Case</h2></hgroup><article  id="remark-about-the-p-0.99-case">
+
+<p><code>choose()</code> does not work for bigger numbers.<br/>We need to aply the &lsquo;arbitrary-precision&rsquo; package <strong>gmp</strong>.</p>
+
+<pre class = 'prettyprint lang-r'>n &lt;- 1:3185
+b2 &lt;- as.bigz(2)
+A &lt;- chooseZ(b2*(n-1), n-1)/(b2^(b2*(n-1))*(b2*n))
+W &lt;- c(0, cumsum(as.numeric(A)))
+cbind(2*c(3182:3185), W[3182:3185])
+## [1,] 6364 0.9899971
+## [2,] 6366 0.9899987
+## [3,] 6368 0.9900002
+## [4,] 6370 0.9900018</pre>
+
+</article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Appendices</h2></hgroup><article  id="appendices">
+
+</article></slide><slide class=""><hgroup><h2>JavaScript and R</h2></hgroup><article  id="javascript-and-r">
+
+<p>Package <strong>V8</strong> provides an embedded JavaScript engine<br/>(On Linux, the user needs to install <code>libv8-dev</code>)</p>
+
+<p>Since version 2.0 (2019-02-07) it supports ECMAScript 6<br/>i.e., version 6 that implements, e.g., &lsquo;collections&rsquo;</p>
+
+<pre >library(V8); js &lt;- v8()
+js$console()
+js$eval(&quot;&lt;JS code&gt;&quot;)
+js$source(&quot;&lt;file.js&gt;&quot;)
+js$assign(&quot;var_name&quot;, &lt;R object&gt;)
+js$get(&quot;var_name&quot;)
+js$call(&quot;&lt;JS function&gt;&quot;, &lt;args...&gt;)</pre>
+
+<p>Objects will be exchanged using the JSON format.</p>
+
+</article></slide><slide class=""><hgroup><h2>Random Walks with JavaScript</h2></hgroup><article  id="random-walks-with-javascript">
+
+<pre class = 'prettyprint lang-js'>function rwalk(N, M) {
+    var result = new Array(N)
+    var a = 0, steps
+    for (var i = 0; i &lt; N; i++) {
+        steps = 2
+        if (Math.random() &gt;= 0.5) {a = 1} else {a = -1}
+        if (Math.random() &gt;= 0.5) {++a} else {--a}
+        while (a != 0) {
+            steps += 2
+            if (Math.random() &gt;= 0.5) {++a} else {--a}
+            if (Math.random() &gt;= 0.5) {++a} else {--a}
+            if (steps &gt;= M) break
+        }
+        result[i] = steps
+    }
+    return result
+}</pre>
+
+</article></slide><slide class=""><hgroup><h2>Results with Javascript</h2></hgroup><article  id="results-with-javascript">
+
+<p>Find probabilities with 1 million random walks:</p>
+
+<pre class = 'prettyprint lang-r'>    library(V8)
+    js &lt;- v8()
+    # js$eval(&quot;function rwalk(N, M) { ... }&quot;)
+    js$source(&quot;rwalk.js&quot;)           #   user  system elapsed
+    system.time(                    #  1.845   0.101   1.933 
+        js$eval(&quot;var noStepsJS
+                 noStepsJS = rwalk(10^6, 10^4)
+                 undefined&quot;) )
+    noStepsR &lt;- js$get(&quot;noStepsJS&quot;)
+    ...
+
+    ## No. of steps for p &gt;= 0.975: 1020
+    ## No. of steps for p &gt;= 0.990: 6380</pre>
+
+</article></slide><slide class=""><hgroup><h2>Julia and R</h2></hgroup><article  id="julia-and-r">
+
+<p>Package <strong>JuliaCall</strong> provides an R interface to Julia,<br/>a high-performance language for numerical computing.</p>
+
+<p>Stable version 1.0 (2018-08-08) is backward-compatible.</p>
+
+<pre >library(JuliaCall); julia_setup()
+julia_console()
+julia_source(&quot;&lt;file.jl&gt;&quot;)
+julia_command(&quot;&lt;Julia code&gt;&quot;)
+julia_eval(&quot;var_name&quot;)
+julia_assign(&quot;&lt;var_name&gt;&quot;, &lt;R object&gt;)
+julia_call(&quot;&lt;Julia function&gt;&quot;, &lt;args...&gt;)</pre>
+
+<p>Objects will be exchanged using R6 and the JSON format.</p>
+
+</article></slide><slide class=""><hgroup><h2>Random Walks with Julia</h2></hgroup><article  id="random-walks-with-julia">
+
+<pre class = 'prettyprint lang-julia'>rwalk = function(N, M)
+    result = zeros(Int, N)
+    for i in 1:N
+        steps = 2
+        rand() &gt;= 0.5 ?  a = 1 : a = -1
+        rand() &gt;= 0.5 ? a += 1 : a -= 1
+        while a != 0
+            steps += 2
+            rand() &gt;= 0.5 ? a += 1 : a -= 1
+            rand() &gt;= 0.5 ? a += 1 : a -= 1
+            if steps &gt;= M; break; end
+        end
+        result[i] = steps
+    end
+    return result
+end</pre>
+
+</article></slide><slide class=""><hgroup><h2>Results with Julia</h2></hgroup><article  id="results-with-julia">
+
+<pre class = 'prettyprint lang-r'>    library(JuliaCall)
+    julia_setup()
+
+    js$source(&quot;rwalk.jl&quot;)
+    julia_command(&quot;rw = rwalk(10, 10);&quot;)  # compile function
+    system.time(
+        no_steps &lt;- julia_eval(&quot;rwalk(1000000, 10000)&quot;) )
+    ##  user  system elapsed 
+    ## 0.330   0.008   0.338 
+
+    ...
+
+    ## No. of steps for p &gt;= 0.975: 1020
+    ## No. of steps for p &gt;= 0.990: 6348</pre></article></slide>
+
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "RandomNumbers_files/mathjax-local/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+<!-- map slide visiblity events into shiny -->
+<script>
+  (function() {
+    if (window.jQuery) {
+       window.jQuery(document).on('slideleave', function(e) {
+         window.jQuery(e.target).trigger('hidden');
+      });
+       window.jQuery(document).on('slideenter', function(e) {
+         window.jQuery(e.target).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>
