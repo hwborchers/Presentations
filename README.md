@@ -5,7 +5,43 @@
 
 # Presentations
  
-## Talks 2014 - 2019
+## Talks 2014 - 2020
+
+### 2020
+
+**Nichtlineare Regression mit R**\
+*Wiesbaden R User Group, December 2020*
+
+> 'nls()' in Base R ist eine häufig verwendete Funktion zur "least-squares" 
+> Schätzungen der Parameter eines nichtlinearen Modells; ihre Implementierung 
+> hat jedoch schwerwiegende Probleme und Einschränkungen. Wir werden 
+> Alternativen erörtern, die in R-Paketen verfügbar sind -- und auch, wie 
+> Einschränkungen, z.B. Positivitätsbedingungen, für die gesuchten Parameter 
+> einbezogen werden können.
+
+[R Markdown notebook](https://rpubs.com/hwborchers/698786)
+
+**R und das S4 Objekt-System**\
+*Wiesbaden R User Group, September 2020*
+
+> Beschreibt das S4 Klassensystem anhand einer Implementierung des Gauss'schen 
+> Gesetzes zur Fehlerfortpflanzung; die notwendigen arithmetischen Operationen 
+> werden als Operationen auf den S4 Objekten realisiert. Ein analoges Beispiel 
+> für "dual numbers" findet man hier:
+
+Implementation of [R Dual Numbers](https://github.com/hwborchers/RDualNumbers)
+
+**Subgroup Discovery mit R**\
+*Wiesbaden R User Group, June 2020*
+
+> Subgroup Discovery (SD) ist eine Technik des beschreibenden und explorativen 
+> Data Minings. Es werden 'interessante' Teilmengen der Daten identifiziert, in 
+> Hinblick auf ein für die jeweilige Anwendung wichtiges Merkmal. SD ist von 
+> praktischer Relevanz für wissenschaftliche wie geschäftliche Datenanalysen 
+> und kann für Analysten wie Kunden überraschende Einblicke in die Daten
+> liefern. Ein R Paket wird vorgestellt, das diese Methode implementiert.
+
+[Slides](https://rpubs.com/hwborchers/630659) - the 'rsubgroup' package
 
 ### 2019
 
@@ -174,19 +210,3 @@ Presentation: [Julia for Python Users](https://cdn.rawgit.com/hwborchers/Present
 > informieren möchten.
 
 Folien: [Statistics Environment R](./Presents/RinKassel2.pdf) (in English).
-
-
-## In Preparation
-
-**Subgroup Discovery - a Data Mining Technique**  
-*Not yet available*
-
-> Subgroup Discovery is a Data Mining algorithm that has high practical
-> relevance in science and business applications. It identifies subsets of
-> the data with "interesting" features. Subgroup Discovery is especially
-> useful in the explanatory data analysis phase and can provide surprising
-> insights into the data for you and/or your customers. Theory and two
-> packages that implement this technique will be discussed.
-
-**Functional Data Analysis**  
-*Not yet available*
