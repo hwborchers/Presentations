@@ -31,6 +31,15 @@
 
 Implementation of [R Dual Numbers](https://github.com/hwborchers/RDualNumbers)
 
+**The mlr3 package system**\
+*R User Group, Heidelberg, Jul-Aug 2020*
+
+> Duscussing the 'mlr3' packages with introduction, mlr3 learners (especially 
+> Random Forest), prediction and accuracy, resampling and cross-validation, 
+> as well as hyperparameter tuning.
+
+[mlr3 examples](https://github.com/hwborchers/mlr3examples) Github repository
+
 **Subgroup Discovery mit R**\
 *Wiesbaden R User Group, June 2020*
 
