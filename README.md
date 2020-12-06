@@ -9,7 +9,7 @@
 
 ### 2020
 
-**Nichtlineare Regression mit R**\
+**Nichtlineare Regression in R**\
 *Wiesbaden R User Group, December 2020*
 
 > 'nls()' in Base R ist eine häufig verwendete Funktion zur "least-squares" 
