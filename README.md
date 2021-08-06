@@ -5,7 +5,23 @@
 
 # Presentations
  
-## Talks 2014 - 2020
+## Talks 2014 - 2021
+
+### 2021
+
+**Differential Equations with R**
+
+**Key-value Stores**
+
+**Regression Trees**\
+*January 2021*
+
+> The idea of "Linear (or local) Regression Trees" is to grow a tree, similar 
+> to a decision tree, in which every end node is associated with linear 
+> regression for some or all of the variables in the data. The first idea and 
+> implementation was done by Ross Quinlan (of C4.5 fame) in his 'M5' program, 
+> available in the 'Cubist' package. Other implementation are lmtree() in 
+> 'partykit' or M5P in the 'RWeka' package.
 
 ### 2020
 
