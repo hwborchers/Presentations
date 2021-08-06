@@ -9,19 +9,37 @@
 
 ### 2021
 
+**Voting Procedures (the 'vote' Package)**
+*Wiesbaden R User Group, September 2021*
+
+
+
 **Differential Equations with R**
+R User Group, Heidelberg, July 2021
+
+> Several CRAN packages provide solvers for handling Differential Equations. 
+> We will -- through examples -- show how to solve ordinary differential 
+> equations (ODEs), systems of DEs, and DEs of second order, mostly with 
+> routines from the 'pracma' and 'deSolve' packages. If there is time, it will 
+> be demonstrated how to apply the powerful Julia 'DifferentialEquations' 
+> package from R through 'diffeqr'.
+
+[ODEs with R](https://github.com/hwborchers/LightningTalks/blob/main/ODEwithR/ODEwithR2.md)
 
 **Key-value Stores**
+*R User Group, Heidelberg, 2021*
+
+
 
 **Regression Trees**\
 *January 2021*
 
 > The idea of "Linear (or local) Regression Trees" is to grow a tree, similar 
-> to a decision tree, in which every end node is associated with linear 
+> to a decision tree, in which every end node is associated with a linear 
 > regression for some or all of the variables in the data. The first idea and 
 > implementation was done by Ross Quinlan (of C4.5 fame) in his 'M5' program, 
-> available in the 'Cubist' package. Other implementation are lmtree() in 
-> 'partykit' or M5P in the 'RWeka' package.
+> for R users available in the 'Cubist' package. Other implementation are 
+> lmtree() in 'partykit' or M5P() in the 'RWeka' package.
 
 ### 2020
 
