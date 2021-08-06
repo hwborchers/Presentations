@@ -9,7 +9,7 @@
 
 ### 2021
 
-**Voting Procedures (the 'vote' Package)**\
+**Voting Procedures (and the 'vote' Package)**\
 *Wiesbaden R User Group, October 2021*
 
 > Die Teilnehmer einer Abstimmung haben bestimmte Präferenzen bzgl. möglicher 
