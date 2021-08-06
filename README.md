@@ -38,8 +38,9 @@ R User Group, Heidelberg, July 2021
 > to a decision tree, in which every end node is associated with a linear 
 > regression for some or all of the variables in the data. The first idea and 
 > implementation was done by Ross Quinlan (of C4.5 fame) in his 'M5' program, 
-> for R users available in the 'Cubist' package. Other implementation are 
-> lmtree() in 'partykit' or M5P() in the 'RWeka' package.
+> for R users available in the 'Cubist' package. Other implementations are 
+> lmtree() in 'partykit' or M5P() in 'RWeka'; we also compare it with CART 
+> and RandomForest trees.
 
 ### 2020
 
@@ -49,9 +50,9 @@ R User Group, Heidelberg, July 2021
 > 'nls()' in Base R ist eine häufig verwendete Funktion zur "least-squares" 
 > Schätzungen der Parameter eines nichtlinearen Modells; ihre Implementierung 
 > hat jedoch schwerwiegende Probleme und Einschränkungen. Wir werden 
-> Alternativen erörtern, die in R-Paketen verfügbar sind -- und auch, wie 
-> Einschränkungen, z.B. Positivitätsbedingungen, für die gesuchten Parameter 
-> einbezogen werden können.
+> Alternativen erörtern, die in R-Paketen verfügbar sind, vor allem nlxb() im 
+> 'nlsr' Paket -- und auch, wie Einschränkungen, z.B. Positivitätsbedingungen, 
+> für die gesuchten Parameter einbezogen werden können.
 
 [R Markdown notebook](https://rpubs.com/hwborchers/698786)
 
