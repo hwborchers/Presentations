@@ -14,7 +14,7 @@
 
 
 
-**Differential Equations with R**
+**Differential Equations with R**\
 R User Group, Heidelberg, July 2021
 
 > Several CRAN packages provide solvers for handling Differential Equations. 
