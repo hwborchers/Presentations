@@ -12,7 +12,14 @@
 **Voting Procedures (the 'vote' Package)**\
 *Wiesbaden R User Group, October 2021*
 
+> Die Teilnehmer einer Abstimmung haben bestimmte Präferenzen bzgl. möglicher 
+> Alternativen. Darauf aufbauend gibt es verschiedene Abstimmungsverfahren
+> (engl. *voting procedures*), einige davon sind auch in dem 'vote' Paket 
+> implementiert. Aber welche dieser Verfahren sind gerecht, fair oder weniger 
+> manipulierbar. Am Ende werden wir einige relativ unbekannte Verfahren und 
+> den "Arrowschen Unmöglichkeitssatz" diskutieren.
 
+[Abstimmungsverfahren / Voting Procedures](https://github.com/hwborchers/LightningTalks/blob/main/voting_procedures/voting.md)
 
 **Differential Equations with R**\
 R User Group, Heidelberg, July 2021
