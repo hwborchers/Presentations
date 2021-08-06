@@ -9,7 +9,7 @@
 
 ### 2021
 
-**Voting Procedures (the 'vote' Package)**
+**Voting Procedures (the 'vote' Package)**\
 *Wiesbaden R User Group, September 2021*
 
 
@@ -20,13 +20,13 @@ R User Group, Heidelberg, July 2021
 > Several CRAN packages provide solvers for handling Differential Equations. 
 > We will -- through examples -- show how to solve ordinary differential 
 > equations (ODEs), systems of DEs, and DEs of second order, mostly with 
-> routines from the 'pracma' and 'deSolve' packages. If there is time, it will 
-> be demonstrated how to apply the powerful Julia 'DifferentialEquations' 
-> package from R through 'diffeqr'.
+> routines from the 'pracma' and 'deSolve' packages. If there is time, 
+> it will be demonstrated how the R user can apply Julia's powerful 
+> 'DifferentialEquations.jl' through the 'diffeqr' R package.
 
 [ODEs with R](https://github.com/hwborchers/LightningTalks/blob/main/ODEwithR/ODEwithR2.md)
 
-**Key-value Stores**
+**Key-value Stores**\
 *R User Group, Heidelberg, 2021*
 
 
