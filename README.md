@@ -10,7 +10,7 @@
 ### 2021
 
 **Voting Procedures (the 'vote' Package)**\
-*Wiesbaden R User Group, September 2021*
+*Wiesbaden R User Group, October 2021*
 
 
 
@@ -20,16 +20,23 @@ R User Group, Heidelberg, July 2021
 > Several CRAN packages provide solvers for handling Differential Equations. 
 > We will -- through examples -- show how to solve ordinary differential 
 > equations (ODEs), systems of DEs, and DEs of second order, mostly with 
-> routines from the 'pracma' and 'deSolve' packages. If there is time, 
-> it will be demonstrated how the R user can apply Julia's powerful 
+> routines from the 'pracma' and 'deSolve' packages. If there is time, it 
+> will be demonstrated how the R user can apply Julia's extremely powerful 
 > 'DifferentialEquations.jl' through the 'diffeqr' R package.
 
 [ODEs with R](https://github.com/hwborchers/LightningTalks/blob/main/ODEwithR/ODEwithR2.md)
 
 **Key-value Stores**\
-*R User Group, Heidelberg, 2021*
+*R User Group, Heidelberg, May 2021*
 
+> The data structure of key-value stores or associative arrays (computer 
+> science) come under different names in several programming languages, such 
+> as 'dictionary' (Python, Julia), 'hash' (Perl, Ruby, JavaScript), 'map' 
+> (Java, Haskell), or 'table' (Lua), etc. We discuss some R packages that 
+> provide this functionality of key-value stores, like 'hash', 'filehash', 
+> 'fastmap', 'rredis' or 'RcppRedis', packages that provide key-value stores.
 
+[Key-value Stores](https://github.com/hwborchers/LightningTalks/blob/main/key-value_stores/collatz.md)
 
 **Regression Trees**\
 *January 2021*
@@ -41,6 +48,8 @@ R User Group, Heidelberg, July 2021
 > for R users available in the 'Cubist' package. Other implementations are 
 > lmtree() in 'partykit' or M5P() in 'RWeka'; we also compare it with CART 
 > and RandomForest trees.
+
+[Linear Regression Trees](https://rpubs.com/hwborchers/701464)
 
 ### 2020
 
