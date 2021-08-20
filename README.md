@@ -21,6 +21,15 @@
 
 [Abstimmungsverfahren / Voting Procedures](https://github.com/hwborchers/LightningTalks/blob/main/voting_procedures/voting.md)
 
+**Regular Expressions in R**\
+R User Group, Heidelberg, September 2021
+
+> Short reminder of regular expressions, their syntax and basic elements,
+> functions in Base R and/or package 'stringr' for using regular expressions,
+> some examples, and a Shiny application for testing regular expressions.
+
+[Regular Expressions](https://github.com/hwborchers/LightningTalks/blob/main/regExpressions/regularExpressions.md)
+
 **Differential Equations with R**\
 R User Group, Heidelberg, July 2021
 
