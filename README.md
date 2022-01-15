@@ -5,12 +5,26 @@
 
 # Presentations
  
-## Talks 2014 - 2021
+## Talks 2014 - 2022
+
+### 2022
+
+**Differential Equations with R**\
+*R User Group, Heidelberg, March 2022*
+
+> Several CRAN packages provide solvers for handling Differential Equations. 
+> We will -- through examples -- show how to solve ordinary differential 
+> equations (ODEs), systems of DEs, and DEs of second order, mostly with 
+> routines from the 'pracma' and 'deSolve' packages. If there is time, it 
+> will be demonstrated how the R user can apply Julia's extremely powerful 
+> 'DifferentialEquations.jl' through the 'diffeqr' R package.
+
+[ODEs with R](https://github.com/hwborchers/LightningTalks/blob/main/ODEwithR/ODEwithR2.md)
 
 ### 2021
 
 **Voting Procedures (and the 'vote' Package)**\
-*Wiesbaden R User Group, October 2021*
+*R User Group, Heidelberg, October 2021*
 
 > Die Teilnehmer einer Abstimmung haben bestimmte Präferenzen bzgl. möglicher 
 > Alternativen. Darauf aufbauend gibt es verschiedene Abstimmungsverfahren
@@ -22,7 +36,7 @@
 [Abstimmungsverfahren / Voting Procedures](https://github.com/hwborchers/LightningTalks/blob/main/voting_procedures/voting.md)
 
 **Regular Expressions in R**\
-R User Group, Heidelberg, September 2021
+*R User Group, Heidelberg, September 2021*
 
 > Short reminder of regular expressions, their syntax and basic elements,
 > functions in Base R and/or package 'stringr' for using regular expressions,
@@ -30,20 +44,8 @@ R User Group, Heidelberg, September 2021
 
 [Regular Expressions](https://github.com/hwborchers/LightningTalks/blob/main/regExpressions/regularExpressions.md)
 
-**Differential Equations with R**\
-R User Group, Heidelberg, July 2021
-
-> Several CRAN packages provide solvers for handling Differential Equations. 
-> We will -- through examples -- show how to solve ordinary differential 
-> equations (ODEs), systems of DEs, and DEs of second order, mostly with 
-> routines from the 'pracma' and 'deSolve' packages. If there is time, it 
-> will be demonstrated how the R user can apply Julia's extremely powerful 
-> 'DifferentialEquations.jl' through the 'diffeqr' R package.
-
-[ODEs with R](https://github.com/hwborchers/LightningTalks/blob/main/ODEwithR/ODEwithR2.md)
-
 **Key-value Stores**\
-*R User Group, Heidelberg, May 2021*
+*R User Group, Heidelberg, May 2021 (and Wiesbaden, February 2022)*
 
 > The data structure of key-value stores or associative arrays (computer 
 > science) come under different names in several programming languages, such 
@@ -54,7 +56,7 @@ R User Group, Heidelberg, July 2021
 
 [Key-value Stores](https://github.com/hwborchers/LightningTalks/blob/main/key-value_stores/collatz.md)
 
-**Regression Trees**\
+**Linear Regression Trees**\
 *January 2021*
 
 > The idea of "Linear (or local) Regression Trees" is to grow a tree, similar 
