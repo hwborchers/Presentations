@@ -7,6 +7,21 @@
  
 ## Talks 2014 - 2022
 
+### 2023
+
+**Notes on JuliaConnectoR**\
+*Summary Article on Github, July 2023*
+
+> As the 'JuliaCall' R package is currently broken, I present a short
+> introduction to 'JuliaConnectoR', another package on CRAN that provides
+> a bridge between R and Julia. The connecting technology is TCP which
+> makes it more stable to changes in the versions of R or Julia, but also
+> makes it considerably slower in certain situations. All the examples are
+> taken from the "Notes on JuliaCall".
+
+**Differential Evolution for Global Optimization**\
+*September 2023*
+
 ### 2022
 
 **Differential Equations with R**\
